@@ -13,9 +13,9 @@ public class BLesson {
             outAns(n);
             
 		} catch(IOException e) {
-            System.out.println(e);
+            println("" + e);
         } catch(NumberFormatException e) {
-            System.out.println("数字の形式が正しくありません");
+            println("数字の形式が正しくありません");
         }
 	}
 	
@@ -27,8 +27,7 @@ public class BLesson {
 	            "水曜日",
 	            "木曜日",
 	            "金曜日",
-	            "土曜日",
-	        };
+	            "土曜日" };
 		
 		 if (0 <= n && n < 7) {
              println(week[n]);
