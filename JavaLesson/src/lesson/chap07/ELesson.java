@@ -22,21 +22,21 @@ public class ELesson {
 		CocoaString object = name();
 		println(object.name);
 		println(object.emoji);
-		
+
 		object.name = "ここあ";
 		println(object.name);
 		println(object.emoji);
 	}
-	
+
 	public static CocoaString name() {
 		// オブジェクト生成
 		CocoaString cocoa = new CocoaString();
 		cocoa.name = "ココア";
 		cocoa.emoji = "(`0言0́*)<ヴェアアアアアアアア";
-		
+
 		return cocoa;
 	}
-	
+
 	// 文字出力が簡単にできるメソッド
 	public static void println(String s) {
 		System.out.println(s);

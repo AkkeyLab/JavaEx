@@ -6,7 +6,7 @@ public class ALesson {
 		// Swiftならasで型を指定してあげればいいと思う
 		println("" + (100000L * 100000L));
 	}
-	
+
 	// 文字出力が簡単にできるメソッド
 	public static void println(String s) {
 		System.out.println(s);

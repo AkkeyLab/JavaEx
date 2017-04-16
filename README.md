@@ -24,3 +24,6 @@ This README file language is **Japanese**.
   - [switch](JavaLesson/src/lesson/chap04/ALesson.java)
   - [終端文字](JavaLesson/src/lesson/chap06/ALesson.java)
   - [開始文字](JavaLesson/src/lesson/chap06/CLesson.java)
+- 特性
+  - [メソッド引数](JavaLesson/src/lesson/chap07/DLesson.java)
+  - [class](JavaLesson/src/lesson/chap07/ELesson.java)
