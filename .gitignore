@@ -1,5 +1,9 @@
+# mac
+.DS_Store
+
 # eclipse
 .metadata
+.recommenders
 
 # Compiled class file
 *.class
