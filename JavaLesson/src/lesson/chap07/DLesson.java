@@ -19,25 +19,25 @@ public class DLesson {
 		name(names);
 		outString(names);
 	}
-	
+
 	public static void outString(String[] s) {
-		for(int i = 0; i < s.length; i++) {
+		for (int i = 0; i < s.length; i++) {
 			println(s[i]);
 		}
 	}
-	
+
 	// この方法は危険！
 	public static void name(String[] names) {
 		// 引数からの配列に値を格納する
 		// この方法だと引数に渡される配列の大きさが確定されないため、非常に危険である
 		names[0] = "AKIO";
 		names[1] = "ITAYA";
-		
+
 		println("----- name func -----");
 		outString(names);
 		println("---------------------");
 	}
-	
+
 	// 文字出力が簡単にできるメソッド
 	public static void println(String s) {
 		System.out.println(s);
