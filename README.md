@@ -12,18 +12,25 @@ This README file language is **Japanese**.
   - [指定文字列抽出](JavaLesson/src/lesson/chap06/CLesson.java)
 - 入力
   - [文字入力](JavaLesson/src/lesson/chap02/ALesson.java)
+  - [コマンドライン引数](JavaLesson/src/lesson/chap08/BLesson.java)
 - 変換
   - [String -> int](JavaLesson/src/lesson/chap02/ALesson.java)
   - [キャスト](JavaLesson/src/lesson/chap02/BLesson.java)
 - 変数
   - [long int](JavaLesson/src/lesson/chap01/ALesson.java)
   - [文字配列](JavaLesson/src/lesson/chap02/ALesson.java)
+  - [2次元配列](JavaLesson/src/lesson/chap08/DLesson.java)
 - 比較
   - [try](JavaLesson/src/lesson/chap02/ALesson.java)
   - [if](JavaLesson/src/lesson/chap03/ALesson.java)
   - [switch](JavaLesson/src/lesson/chap04/ALesson.java)
   - [終端文字](JavaLesson/src/lesson/chap06/ALesson.java)
   - [開始文字](JavaLesson/src/lesson/chap06/CLesson.java)
+  - [最大値](JavaLesson/src/lesson/chap08/CLesson.java)
+  - [ソート](JavaLesson/src/lesson/chap08/ELesson.java)
 - 特性
   - [メソッド引数](JavaLesson/src/lesson/chap07/DLesson.java)
   - [class](JavaLesson/src/lesson/chap07/ELesson.java)
+- 実行
+  - [拡張for文](JavaLesson/src/lesson/chap08/ALesson.java)
+  - [終了](JavaLesson/src/lesson/chap08/BLesson.java)
