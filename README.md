@@ -31,6 +31,8 @@ This README file language is **Japanese**.
 - 特性
   - [メソッド引数](JavaLesson/src/lesson/chap07/DLesson.java)
   - [class](JavaLesson/src/lesson/chap07/ELesson.java)
+  - [オーバーライド](JavaLesson/src/lesson/chap09/ALesson.java)
+  - [コンストラクタ](JavaLesson/src/lesson/chap09/Student.java)
 - 実行
   - [拡張for文](JavaLesson/src/lesson/chap08/ALesson.java)
   - [終了](JavaLesson/src/lesson/chap08/BLesson.java)
