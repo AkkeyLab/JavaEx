@@ -35,6 +35,7 @@ This README file language is **Japanese**.
   - [コンストラクタ](JavaLesson/src/lesson/chap09/Student.java)
   - [static func](JavaLesson/src/lesson/chap10/ALesson.java)
   - [static グローバル変数](JavaLesson/src/lesson/chap10/CLesson.java)
+  - [継承](JavaLesson/src/lesson/chap11/ALesson.java)
 - 実行
   - [拡張for文](JavaLesson/src/lesson/chap08/ALesson.java)
   - [終了](JavaLesson/src/lesson/chap08/BLesson.java)
