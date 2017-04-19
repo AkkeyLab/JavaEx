@@ -33,6 +33,8 @@ This README file language is **Japanese**.
   - [class](JavaLesson/src/lesson/chap07/ELesson.java)
   - [オーバーライド](JavaLesson/src/lesson/chap09/ALesson.java)
   - [コンストラクタ](JavaLesson/src/lesson/chap09/Student.java)
+  - [static func](JavaLesson/src/lesson/chap10/ALesson.java)
+  - [static グローバル変数](JavaLesson/src/lesson/chap10/CLesson.java)
 - 実行
   - [拡張for文](JavaLesson/src/lesson/chap08/ALesson.java)
   - [終了](JavaLesson/src/lesson/chap08/BLesson.java)
