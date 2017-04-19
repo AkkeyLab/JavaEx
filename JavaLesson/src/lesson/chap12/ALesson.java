@@ -10,7 +10,7 @@ public class ALesson {
 	}
 
 	static void myAssign(int[] arr, int index, int value) {
-		System.out.println("myAssignに来ました");
+		println("myAssign");
 		try {
 			println("Let's input value");
 			arr[index] = value;
