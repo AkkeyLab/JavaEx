@@ -10,6 +10,8 @@ This README file language is **Japanese**.
     - [format](JavaLesson/src/lesson/chap05/BLesson.java)
   - [文字抽出](JavaLesson/src/lesson/chap02/BLesson.java)
   - [指定文字列抽出](JavaLesson/src/lesson/chap06/CLesson.java)
+  - [StackTrace](JavaLesson/src/lesson/chap12/BLesson.java)
+  - [例外](JavaLesson/src/lesson/chap12/BLesson.java)
 - 入力
   - [文字入力](JavaLesson/src/lesson/chap02/ALesson.java)
   - [コマンドライン引数](JavaLesson/src/lesson/chap08/BLesson.java)
@@ -39,3 +41,4 @@ This README file language is **Japanese**.
 - 実行
   - [拡張for文](JavaLesson/src/lesson/chap08/ALesson.java)
   - [終了](JavaLesson/src/lesson/chap08/BLesson.java)
+  - [try](JavaLesson/src/lesson/chap12/ALesson.java)
