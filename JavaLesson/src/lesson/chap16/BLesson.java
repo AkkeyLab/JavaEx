@@ -6,11 +6,15 @@ public class BLesson {
 	static final int MAX_PRIME = 1000;
 
 	public static void main(String[] args) {
+		// コマンド引数は適切？
 		if (args.length != 1) {
 			println("How to use：java BLesson MakeFile");
 			println("ex：java BLesson BLesson.txt");
+			// 終了
 			System.exit(0);
 		}
+		
+		// 引数を取得
 		String filename = args[0];
 		try {
 			PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(filename)));
