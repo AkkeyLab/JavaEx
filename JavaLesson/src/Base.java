@@ -1,11 +1,16 @@
 
+/**
+ * @author akkey
+ * @version $Revision$, May 6, 2017
+ */
 public class Base {
-	public static void main(String[] args) {
 
-	}
-
-	// 文字出力が簡単にできるメソッド
-	public static void println(String s) {
-		System.out.println(s);
-	}
+  /**
+   * 文字出力が簡単にできるメソッド
+   * 
+   * @param s 出力する文字列
+   */
+  public static void println(String s) {
+    System.out.println(s);
+  }
 }
