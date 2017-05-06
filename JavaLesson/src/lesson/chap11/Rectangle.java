@@ -19,6 +19,6 @@ class Rectangle {
 
 	@Override
 	public String toString() {
-		return "[" + width + ", " + height + "]";
+    return Messages.getString("Rectangle.0") + this.width + Messages.getString("Rectangle.1") + this.height + Messages.getString("Rectangle.2"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 	}
 }
