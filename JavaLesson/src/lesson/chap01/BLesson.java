@@ -7,6 +7,8 @@ package lesson.chap01;
 public class BLesson {
 
   /**
+   * 実行開始地点
+   * 
    * @param args コマンドライン引数
    */
   public static void main(String[] args) {
@@ -24,7 +26,7 @@ public class BLesson {
   }
 
   /**
-   * C言語風にフォーマット指定で記述 Swiftでもこのようなフォーマット方法が使用できる。
+   * C言語風に実装したメソッド C言語風にフォーマット指定で記述 Swiftでもこのようなフォーマット方法が使用できる。
    */
   public static void product_c() {
     for (int i = 0; i <= 10; i++) {

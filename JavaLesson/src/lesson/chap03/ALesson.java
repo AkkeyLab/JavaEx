@@ -10,6 +10,8 @@ import java.io.*;
 public class ALesson {
 
   /**
+   * 実行開始地点
+   * 
    * @param args コマンドライン引数
    */
   public static void main(String[] args) {
@@ -31,6 +33,8 @@ public class ALesson {
   }
 
   /**
+   * 入力時間に応じた挨拶を出力するメソッド
+   * 
    * @param n 時間
    * @return 時間に対応した挨拶文字列
    */
