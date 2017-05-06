@@ -24,47 +24,71 @@ package lesson.chap08;
  * 
  */
 
+/**
+ * @author akkey
+ * @version $Revision$, May 7, 2017
+ */
 public class ELesson {
-	public static void main(String[] args) {
-		int[] data = { 31, 41, 59, 26, 53, 58, 97, 93, 23, 84 };
-		printArray(data);
 
-		// 左から順に、一つを固定して
-		// それと右側の数値をそれぞれ比較していく
-		println("----- sort -----");
-		for (int i = 0; i < data.length - 1; i++) {
-			for (int j = i + 1; j < data.length; j++) {
-				if (data[i] > data[j]) {
-					// 左が右より大きければ入れ替える
-					// Swiftだったら
-					// _ a = data[i];
-					// と定義するといい
-					int a = data[i];
-					data[i] = data[j];
-					data[j] = a;
+  /**
+   * 実行開始地点
+   * 
+   * @param args コマンドライン引数
+   */
+  public static void main(String[] args) {
+    int[] data = {31, 41, 59, 26, 53, 58, 97, 93, 23, 84};
+    printArray(data);
 
-					printArray(data);
-				}
-			}
-		}
-		println("----------------");
+    // 左から順に、一つを固定して
+    // それと右側の数値をそれぞれ比較していく
+    println(Messages.getString("ELesson.0")); //$NON-NLS-1$
+    for (int i = 0; i < data.length - 1; i++) {
+      for (int j = i + 1; j < data.length; j++) {
+        if (data[i] > data[j]) {
+          // 左が右より大きければ入れ替える
+          // Swiftだったら
+          // _ a = data[i];
+          // と定義するといい
+          int a = data[i];
+          data[i] = data[j];
+          data[j] = a;
 
-		printArray(data);
-	}
+          printArray(data);
+        }
+      }
+    }
+    println(Messages.getString("ELesson.1")); //$NON-NLS-1$
 
-	public static void printArray(int[] data) {
-		for (int i = 0; i < data.length; i++) {
-			print(data[i] + " ");
-		}
-		println("");
-	}
+    printArray(data);
+  }
 
-	public static void print(String s) {
-		System.out.print(s);
-	}
+  /**
+   * 配列を表示するメソッド
+   * 
+   * @param data 文字列配列
+   */
+  public static void printArray(int[] data) {
+    for (int i = 0; i < data.length; i++) {
+      print(data[i] + Messages.getString("ELesson.2")); //$NON-NLS-1$
+    }
+    println(""); //$NON-NLS-1$
+  }
 
-	// 文字出力が簡単にできるメソッド
-	public static void println(String s) {
-		System.out.println(s);
-	}
+  /**
+   * 改行を行わない文字出力
+   * 
+   * @param s 出力する文字列
+   */
+  public static void print(String s) {
+    System.out.print(s);
+  }
+
+  /**
+   * 文字出力が簡単にできるメソッド
+   * 
+   * @param s 出力する文字列
+   */
+  public static void println(String s) {
+    System.out.println(s);
+  }
 }
