@@ -1,5 +1,9 @@
 package lesson.chap10;
 
+/**
+ * @author akkey
+ * @version $Revision$, May 7, 2017
+ */
 public class Data {
 	int x, y, z;
 

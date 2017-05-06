@@ -7,19 +7,33 @@ package lesson.chap10;
  * インスタンスが異なるにも関わらず、staticで宣言していた変数の値が共有されているのがわかる
  */
 
+/**
+ * @author akkey
+ * @version $Revision$, May 7, 2017
+ */
 public class CLesson {
-	public static void main(String[] args) {
-		GamePlayer[] player = new GamePlayer[3];
-		player[0] = new GamePlayer("Mad Hatter", "Akkey");
-		player[1] = new GamePlayer("March Hare", "Akio");
-		player[2] = new GamePlayer("Alice", "Itaya");
-		for (int i = 0; i < player.length; i++) {
-			println("" + player[i]);
-		}
-	}
 
-	// 文字出力が簡単にできるメソッド
-	public static void println(String s) {
-		System.out.println(s);
-	}
+  /**
+   * 実行開始地点
+   * 
+   * @param args コマンドライン引数
+   */
+  public static void main(String[] args) {
+    GamePlayer[] player = new GamePlayer[3];
+    player[0] = new GamePlayer(Messages.getString("CLesson.0"), Messages.getString("CLesson.1")); //$NON-NLS-1$ //$NON-NLS-2$
+    player[1] = new GamePlayer(Messages.getString("CLesson.2"), Messages.getString("CLesson.3")); //$NON-NLS-1$ //$NON-NLS-2$
+    player[2] = new GamePlayer(Messages.getString("CLesson.4"), Messages.getString("CLesson.5")); //$NON-NLS-1$ //$NON-NLS-2$
+    for (int i = 0; i < player.length; i++) {
+      println("" + player[i]); //$NON-NLS-1$
+    }
+  }
+
+  /**
+   * 文字出力が簡単にできるメソッド
+   * 
+   * @param s 出力する文字列
+   */
+  public static void println(String s) {
+    System.out.println(s);
+  }
 }
