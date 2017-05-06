@@ -1,20 +1,22 @@
 package lesson.chap15;
 
 class LabelPrinter extends Thread {
-	String label = "no label";
 
-	LabelPrinter(String label) {
-		this.label = label;
-	}
+  String label = Messages.getString("LabelPrinter.0"); //$NON-NLS-1$
 
-	@Override
-	public void run() {
-		while (true) {
-			System.out.println(label);
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-			}
-		}
-	}
+  LabelPrinter(String label) {
+    this.label = label;
+  }
+
+  @Override
+  public void run() {
+    while (true) {
+      System.out.println(this.label);
+      try {
+        Thread.sleep(1000);
+      } catch (InterruptedException e) {
+        System.out.println(e);
+      }
+    }
+  }
 }
