@@ -20,35 +20,17 @@ public class PlateTest {
    */
   @Test
   public void testGetPriceRed() {
-    Plate plate = Plate.createRedPlate(1); // 何周目であるかを引数で指定
-    assertEquals(100, plate.getPrice(), 0);
+    final double RED_PRICE = 100;
 
-    Plate plate2 = Plate.createRedPlate(2);
-    assertEquals(plate.getPrice(), plate2.getPrice(), 0);
+    for (int i = 1; i <= 4; i++) {
+      assertEquals(RED_PRICE, Plate.createRedPlate(i).getPrice(), 0);
+    }
 
-    Plate plate3 = Plate.createRedPlate(3);
-    assertEquals(plate.getPrice(), plate3.getPrice(), 0);
+    for (int i = 5; i <= 9; i++) {
+      assertEquals(RED_PRICE * 0.9, Plate.createRedPlate(i).getPrice(), 0);
+    }
 
-    Plate plate4 = Plate.createRedPlate(4);
-    assertEquals(plate.getPrice(), plate4.getPrice(), 0);
-    // -----
-    Plate plate5 = Plate.createRedPlate(5);
-    assertEquals(plate.getPrice() * 0.9, plate5.getPrice(), 0);
-
-    Plate plate6 = Plate.createRedPlate(6);
-    assertEquals(plate.getPrice() * 0.9, plate6.getPrice(), 0);
-
-    Plate plate7 = Plate.createRedPlate(7);
-    assertEquals(plate.getPrice() * 0.9, plate7.getPrice(), 0);
-
-    Plate plate8 = Plate.createRedPlate(8);
-    assertEquals(plate.getPrice() * 0.9, plate8.getPrice(), 0);
-
-    Plate plate9 = Plate.createRedPlate(9);
-    assertEquals(plate.getPrice() * 0.9, plate9.getPrice(), 0);
-    // -----
-    Plate plate10 = Plate.createRedPlate(10);
-    assertEquals(plate.getPrice() * 0.8, plate10.getPrice(), 0);
+    assertEquals(RED_PRICE * 0.8, Plate.createRedPlate(10).getPrice(), 0);
   }
 
   /**
@@ -56,35 +38,17 @@ public class PlateTest {
    */
   @Test
   public void testGetPriceBlue() {
-    Plate plate = Plate.createBluePlate(1); // 何周目であるかを引数で指定
-    assertEquals(300, plate.getPrice(), 0);
+    final double BLUE_PRICE = 300;
 
-    Plate plate2 = Plate.createBluePlate(2);
-    assertEquals(plate.getPrice(), plate2.getPrice(), 0);
+    for (int i = 1; i <= 4; i++) {
+      assertEquals(BLUE_PRICE, Plate.createBluePlate(i).getPrice(), 0);
+    }
 
-    Plate plate3 = Plate.createBluePlate(3);
-    assertEquals(plate.getPrice(), plate3.getPrice(), 0);
+    for (int i = 5; i <= 9; i++) {
+      assertEquals(BLUE_PRICE * 0.9, Plate.createBluePlate(i).getPrice(), 0);
+    }
 
-    Plate plate4 = Plate.createBluePlate(4);
-    assertEquals(plate.getPrice(), plate4.getPrice(), 0);
-    // -----
-    Plate plate5 = Plate.createBluePlate(5);
-    assertEquals(plate.getPrice() * 0.9, plate5.getPrice(), 0);
-
-    Plate plate6 = Plate.createBluePlate(6);
-    assertEquals(plate.getPrice() * 0.9, plate6.getPrice(), 0);
-
-    Plate plate7 = Plate.createBluePlate(7);
-    assertEquals(plate.getPrice() * 0.9, plate7.getPrice(), 0);
-
-    Plate plate8 = Plate.createBluePlate(8);
-    assertEquals(plate.getPrice() * 0.9, plate8.getPrice(), 0);
-
-    Plate plate9 = Plate.createBluePlate(9);
-    assertEquals(plate.getPrice() * 0.9, plate9.getPrice(), 0);
-    // -----
-    Plate plate10 = Plate.createBluePlate(10);
-    assertEquals(plate.getPrice() * 0.8, plate10.getPrice(), 0);
+    assertEquals(BLUE_PRICE * 0.8, Plate.createBluePlate(10).getPrice(), 0);
   }
 
   /**
@@ -92,35 +56,17 @@ public class PlateTest {
    */
   @Test
   public void testGetPriceYellow() {
-    Plate plate = Plate.createYellowPlate(1); // 何周目であるかを引数で指定
-    assertEquals(450, plate.getPrice(), 0);
+    final double YELLOW_PRICE = 450;
 
-    Plate plate2 = Plate.createYellowPlate(2);
-    assertEquals(plate.getPrice(), plate2.getPrice(), 0);
+    for (int i = 1; i <= 4; i++) {
+      assertEquals(YELLOW_PRICE, Plate.createYellowPlate(i).getPrice(), 0);
+    }
 
-    Plate plate3 = Plate.createYellowPlate(3);
-    assertEquals(plate.getPrice(), plate3.getPrice(), 0);
+    for (int i = 5; i <= 9; i++) {
+      assertEquals(YELLOW_PRICE * 0.9, Plate.createYellowPlate(i).getPrice(), 0);
+    }
 
-    Plate plate4 = Plate.createYellowPlate(4);
-    assertEquals(plate.getPrice(), plate4.getPrice(), 0);
-    // -----
-    Plate plate5 = Plate.createYellowPlate(5);
-    assertEquals(plate.getPrice() * 0.9, plate5.getPrice(), 0);
-
-    Plate plate6 = Plate.createYellowPlate(6);
-    assertEquals(plate.getPrice() * 0.9, plate6.getPrice(), 0);
-
-    Plate plate7 = Plate.createYellowPlate(7);
-    assertEquals(plate.getPrice() * 0.9, plate7.getPrice(), 0);
-
-    Plate plate8 = Plate.createYellowPlate(8);
-    assertEquals(plate.getPrice() * 0.9, plate8.getPrice(), 0);
-
-    Plate plate9 = Plate.createYellowPlate(9);
-    assertEquals(plate.getPrice() * 0.9, plate9.getPrice(), 0);
-    // -----
-    Plate plate10 = Plate.createYellowPlate(10);
-    assertEquals(plate.getPrice() * 0.8, plate10.getPrice(), 0);
+    assertEquals(YELLOW_PRICE * 0.8, Plate.createYellowPlate(10).getPrice(), 0);
   }
 
 }
