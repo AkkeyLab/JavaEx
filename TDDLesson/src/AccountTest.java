@@ -72,4 +72,33 @@ public class AccountTest extends TestCase {
     assertEquals(7900, this.account.getTotalPrice());
   }
 
+  /**
+   * 何周目かによる割引を適応したテスト
+   */
+  @Test
+  public void testComplex() {
+    this.account.addRedPlate(1); // 100
+    for (int i = 0; i < 3; i++) {
+      this.account.addBluePlate(1); // 100 + 300 * 3 = 1000
+    }
+    this.account.addYellowPlate(1); // 1000 + 450 = 1450
+    for (int i = 0; i < 2; i++) {
+      this.account.addRedPlate(2); // 1450 + 100 * 2 = 1650
+    }
+    this.account.addRedPlate(3); // 1650 + 100 = 1750
+    for (int i = 0; i < 2; i++) {
+      this.account.addBluePlate(4); // 1750 + 300 * 2 = 2350
+    }
+    for (int i = 0; i < 2; i++) {
+      this.account.addYellowPlate(5); // 450 * 0.9 * 2 = 810 -> 3160
+    }
+    this.account.addBluePlate(9); // 300 * 0.9 = 270 -> 3430
+    for (int i = 0; i < 2; i++) {
+      this.account.addYellowPlate(10); // 450 * 0.8 * 2 = 720 -> 4150
+    }
+    this.account.addRedPlate(15); // 100 * 0.8 = 80 -> 4230
+    
+    assertEquals(4230, this.account.getTotalPrice());
+  }
+
 }
