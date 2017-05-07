@@ -20,7 +20,7 @@ public class PlateTest {
    */
   @Test
   public void testGetPriceRed() {
-    Plate plate = new Plate("RED"); //$NON-NLS-1$
+    Plate plate = Plate.createRedPlate();
     assertEquals(100, plate.getPrice());
   }
 
@@ -29,7 +29,7 @@ public class PlateTest {
    */
   @Test
   public void testGetPriceBlue() {
-    Plate plate = new Plate("BLUE"); //$NON-NLS-1$
+    Plate plate = Plate.createBluePlate();
     assertEquals(300, plate.getPrice());
   }
 
@@ -38,7 +38,7 @@ public class PlateTest {
    */
   @Test
   public void testGetPriceYellow() {
-    Plate plate = new Plate("YELLOW"); //$NON-NLS-1$
+    Plate plate = Plate.createYellowPlate();
     assertEquals(450, plate.getPrice());
   }
 

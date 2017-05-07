@@ -38,21 +38,21 @@ public class Account {
    * 購入皿に赤皿を追加
    */
   public void addRedPlate() {
-    this.plateList.add(new Plate("RED")); //$NON-NLS-1$
+    this.plateList.add(Plate.createRedPlate());
   }
 
   /**
    * 購入皿に青皿を追加
    */
   public void addBluePlate() {
-    this.plateList.add(new Plate("BLUE")); //$NON-NLS-1$
+    this.plateList.add(Plate.createBluePlate());
   }
 
   /**
    * 購入皿に黃皿を追加
    */
   public void addYellowPlate() {
-    this.plateList.add(new Plate("YELLOW")); //$NON-NLS-1$
+    this.plateList.add(Plate.createYellowPlate());
   }
 
 }
