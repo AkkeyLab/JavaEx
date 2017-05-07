@@ -12,6 +12,9 @@
 public class Plate {
 
   private String type;
+  private static final String TYPE_RED = "RED"; //$NON-NLS-1$
+  private static final String TYPE_BLUE = "BLUE"; //$NON-NLS-1$
+  private static final String TYPE_YELLOW = "YELLOW"; //$NON-NLS-1$
 
   /**
    * 新しく生成された<code>Plate</code>オブジェクトを初期化します。
@@ -29,12 +32,11 @@ public class Plate {
    * @return 金額
    */
   public int getPrice() {
-    // TODO 自動生成されたメソッド・スタブ
-    if (this.type.equals("RED")) { //$NON-NLS-1$
+    if (this.type.equals(TYPE_RED)) {
       return 100;
-    } else if (this.type.equals("BLUE")) { //$NON-NLS-1$
+    } else if (this.type.equals(TYPE_BLUE)) {
       return 300;
-    } else if (this.type.equals("YELLOW")) { //$NON-NLS-1$
+    } else if (this.type.equals(TYPE_YELLOW)) {
       return 450;
     }
     return 0;
@@ -46,8 +48,7 @@ public class Plate {
    * @return Plateオブジェクト
    */
   public static Plate createRedPlate() {
-    // TODO 自動生成されたメソッド・スタブ
-    return new Plate("RED"); //$NON-NLS-1$
+    return new Plate(TYPE_RED);
   }
 
   /**
@@ -56,8 +57,7 @@ public class Plate {
    * @return Plateオブジェクト
    */
   public static Plate createBluePlate() {
-    // TODO 自動生成されたメソッド・スタブ
-    return new Plate("BLUE"); //$NON-NLS-1$
+    return new Plate(TYPE_BLUE);
   }
 
   /**
@@ -66,8 +66,7 @@ public class Plate {
    * @return Plateオブジェクト
    */
   public static Plate createYellowPlate() {
-    // TODO 自動生成されたメソッド・スタブ
-    return new Plate("YELLOW"); //$NON-NLS-1$
+    return new Plate(TYPE_YELLOW);
   }
 
 }
