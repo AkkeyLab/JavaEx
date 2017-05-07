@@ -15,15 +15,21 @@ import junit.framework.TestCase;
  */
 public class AccountTest extends TestCase {
 
+  private Account account;
+
+  @Override
+  protected void setUp() throws Exception {
+    super.setUp();
+    this.account = new Account();
+  }
+
   /**
    * 赤皿に関するメソッド
    */
   @Test
   public void testRedPlate() {
-    Account account = new Account();
-
-    account.addRedPlate();
-    assertEquals(100, account.getTotalPrice());
+    this.account.addRedPlate();
+    assertEquals(100, this.account.getTotalPrice());
   }
 
   /**
@@ -31,10 +37,8 @@ public class AccountTest extends TestCase {
    */
   @Test
   public void testBluePlate() {
-    Account account = new Account();
-
-    account.addBluePlate();
-    assertEquals(300, account.getTotalPrice());
+    this.account.addBluePlate();
+    assertEquals(300, this.account.getTotalPrice());
   }
 
   /**
@@ -42,10 +46,8 @@ public class AccountTest extends TestCase {
    */
   @Test
   public void testYellow() {
-    Account account = new Account();
-
-    account.addYellowPlate();
-    assertEquals(450, account.getTotalPrice());
+    this.account.addYellowPlate();
+    assertEquals(450, this.account.getTotalPrice());
   }
 
   /**
@@ -53,12 +55,10 @@ public class AccountTest extends TestCase {
    */
   @Test
   public void testMultiplePlate() {
-    Account account = new Account();
-
-    account.addBluePlate(); // 300
-    account.addRedPlate(); // 300 + 100 = 400
-    account.addRedPlate(); // 400 + 100 = 500
-    assertEquals(500, account.getTotalPrice());
+    this.account.addBluePlate(); // 300
+    this.account.addRedPlate(); // 300 + 100 = 400
+    this.account.addRedPlate(); // 400 + 100 = 500
+    assertEquals(500, this.account.getTotalPrice());
   }
 
 }
