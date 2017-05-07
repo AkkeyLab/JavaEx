@@ -38,21 +38,21 @@ public class Account {
    * 購入皿に赤皿を追加
    */
   public void addRedPlate() {
-    this.plateList.add(Plate.createRedPlate());
+    this.plateList.add(Plate.createRedPlate(1));  // 何周目であるかを引数で指定
   }
 
   /**
    * 購入皿に青皿を追加
    */
   public void addBluePlate() {
-    this.plateList.add(Plate.createBluePlate());
+    this.plateList.add(Plate.createBluePlate(1)); // 何周目であるかを引数で指定
   }
 
   /**
    * 購入皿に黃皿を追加
    */
   public void addYellowPlate() {
-    this.plateList.add(Plate.createYellowPlate());
+    this.plateList.add(Plate.createYellowPlate(1)); // 何周目であるかを引数で指定
   }
 
 }

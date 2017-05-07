@@ -45,27 +45,33 @@ public class Plate {
   /**
    * 赤皿に関するオブジェクト生成メソッド
    * 
+   * @param lap 何周目であるか
+   * 
    * @return Plateオブジェクト
    */
-  public static Plate createRedPlate() {
+  public static Plate createRedPlate(int lap) {
     return new Plate(TYPE_RED);
   }
 
   /**
    * 青皿に関するオブジェクト生成メソッド
    * 
+   * @param lap 何周目であるか
+   * 
    * @return Plateオブジェクト
    */
-  public static Plate createBluePlate() {
+  public static Plate createBluePlate(int lap) {
     return new Plate(TYPE_BLUE);
   }
 
   /**
    * 黃皿に関するオブジェクト生成メソッド
    * 
+   * @param lap 何周目であるか
+   * 
    * @return Plateオブジェクト
    */
-  public static Plate createYellowPlate() {
+  public static Plate createYellowPlate(int lap) {
     return new Plate(TYPE_YELLOW);
   }
 

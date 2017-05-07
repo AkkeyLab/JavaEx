@@ -20,7 +20,7 @@ public class PlateTest {
    */
   @Test
   public void testGetPriceRed() {
-    Plate plate = Plate.createRedPlate();
+    Plate plate = Plate.createRedPlate(1); // 何周目であるかを引数で指定
     assertEquals(100, plate.getPrice());
   }
 
@@ -29,7 +29,7 @@ public class PlateTest {
    */
   @Test
   public void testGetPriceBlue() {
-    Plate plate = Plate.createBluePlate();
+    Plate plate = Plate.createBluePlate(1); // 何周目であるかを引数で指定
     assertEquals(300, plate.getPrice());
   }
 
@@ -38,7 +38,7 @@ public class PlateTest {
    */
   @Test
   public void testGetPriceYellow() {
-    Plate plate = Plate.createYellowPlate();
+    Plate plate = Plate.createYellowPlate(1); // 何周目であるかを引数で指定
     assertEquals(450, plate.getPrice());
   }
 
