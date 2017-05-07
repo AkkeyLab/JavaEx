@@ -11,6 +11,8 @@
  */
 public class Account {
 
+  private int totalPrice;
+
   /**
    * 合計金額を取得するメソッド
    * 
@@ -18,7 +20,15 @@ public class Account {
    */
   public int getTotalPrice() {
     // TODO 自動生成されたメソッド・スタブ
-    return 100;
+    return this.totalPrice;
+  }
+
+  /**
+   * 購入皿に赤皿を追加
+   */
+  public void addRedPlate() {
+    // TODO 自動生成されたメソッド・スタブ
+    this.totalPrice += 100;
   }
 
 }

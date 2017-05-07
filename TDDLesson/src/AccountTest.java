@@ -22,6 +22,7 @@ public class AccountTest extends TestCase {
   public void testRedPlate() {
     Account account = new Account();
 
+    account.addRedPlate();
     assertEquals(100, account.getTotalPrice());
   }
 
