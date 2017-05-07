@@ -38,12 +38,23 @@ public class AccountTest extends TestCase {
   }
 
   /**
+   * 黃皿に関するメソッド
+   */
+  @Test
+  public void testYellow() {
+    Account account = new Account();
+
+    account.addYellowPlate();
+    assertEquals(450, account.getTotalPrice());
+  }
+
+  /**
    * 全皿種類に関するメソッド
    */
   @Test
   public void testMultiplePlate() {
     Account account = new Account();
-    
+
     account.addBluePlate(); // 300
     account.addRedPlate(); // 300 + 100 = 400
     account.addRedPlate(); // 400 + 100 = 500

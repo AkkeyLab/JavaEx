@@ -39,4 +39,12 @@ public class Account {
     this.totalPrice += 300;
   }
 
+  /**
+   * 購入皿に黃皿を追加
+   */
+  public void addYellowPlate() {
+    // TODO 自動生成されたメソッド・スタブ
+    this.totalPrice += 450;
+  }
+
 }
