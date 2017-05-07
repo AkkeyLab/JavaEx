@@ -28,7 +28,7 @@ public class AccountTest extends TestCase {
    */
   @Test
   public void testRedPlate() {
-    this.account.addRedPlate();
+    this.account.addRedPlate(1);
     assertEquals(100, this.account.getTotalPrice());
   }
 
@@ -37,7 +37,7 @@ public class AccountTest extends TestCase {
    */
   @Test
   public void testBluePlate() {
-    this.account.addBluePlate();
+    this.account.addBluePlate(1);
     assertEquals(300, this.account.getTotalPrice());
   }
 
@@ -46,7 +46,7 @@ public class AccountTest extends TestCase {
    */
   @Test
   public void testYellow() {
-    this.account.addYellowPlate();
+    this.account.addYellowPlate(1);
     assertEquals(450, this.account.getTotalPrice());
   }
 
@@ -55,19 +55,19 @@ public class AccountTest extends TestCase {
    */
   @Test
   public void testMultiplePlate() {
-    this.account.addBluePlate(); // 300
-    this.account.addRedPlate(); // 300 + 100 = 400
-    this.account.addRedPlate(); // 400 + 100 = 500
+    this.account.addBluePlate(1); // 300
+    this.account.addRedPlate(1); // 300 + 100 = 400
+    this.account.addRedPlate(1); // 400 + 100 = 500
     assertEquals(500, this.account.getTotalPrice());
 
     for (int i = 0; i < 5; i++) {
-      this.account.addRedPlate(); // 500 + 100 * 5 = 1000
+      this.account.addRedPlate(1); // 500 + 100 * 5 = 1000
     }
     for (int i = 0; i < 8; i++) {
-      this.account.addBluePlate(); // 1000 + 300 * 8 = 3400
+      this.account.addBluePlate(1); // 1000 + 300 * 8 = 3400
     }
     for (int i = 0; i < 10; i++) {
-      this.account.addYellowPlate(); // 3400 + 450 * 10 = 7900
+      this.account.addYellowPlate(1); // 3400 + 450 * 10 = 7900
     }
     assertEquals(7900, this.account.getTotalPrice());
   }
