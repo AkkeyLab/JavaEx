@@ -44,14 +44,19 @@ public class Plate {
       price = 450;
     }
 
+    return calcDiscount(price);
+  }
+
+  private double calcDiscount(double price) {
     // 割引処理
+    double discountPrice = price;
     if (this.lap >= 5 && this.lap <= 9) {
-      price *= 0.9;
+      discountPrice *= 0.9;
     } else if (this.lap >= 10) {
-      price *= 0.8;
+      discountPrice *= 0.8;
     }
 
-    return price;
+    return discountPrice;
   }
 
   /**
