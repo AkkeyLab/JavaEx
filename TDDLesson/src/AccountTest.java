@@ -59,6 +59,17 @@ public class AccountTest extends TestCase {
     this.account.addRedPlate(); // 300 + 100 = 400
     this.account.addRedPlate(); // 400 + 100 = 500
     assertEquals(500, this.account.getTotalPrice());
+
+    for (int i = 0; i < 5; i++) {
+      this.account.addRedPlate(); // 500 + 100 * 5 = 1000
+    }
+    for (int i = 0; i < 8; i++) {
+      this.account.addBluePlate(); // 1000 + 300 * 8 = 3400
+    }
+    for (int i = 0; i < 10; i++) {
+      this.account.addYellowPlate(); // 3400 + 450 * 10 = 7900
+    }
+    assertEquals(7900, this.account.getTotalPrice());
   }
 
 }
