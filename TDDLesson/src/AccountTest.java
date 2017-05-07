@@ -26,4 +26,15 @@ public class AccountTest extends TestCase {
     assertEquals(100, account.getTotalPrice());
   }
 
+  /**
+   * 青皿に関するテスト
+   */
+  @Test
+  public void testBluePlate() {
+    Account account = new Account();
+    
+    account.addBluePlate();
+    assertEquals(300, account.getTotalPrice());
+  }
+
 }
