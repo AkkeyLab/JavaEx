@@ -40,31 +40,31 @@ public class Plate {
   public double getPrice() {
     double price = 0;
 
-    if (this.isDiscount) {
-      if (this.type.equals(TYPE_RED)) {
-        price = 100;
-      } else if (this.type.equals(TYPE_BLUE)) {
-        price = 300;
-      } else if (this.type.equals(TYPE_YELLOW)) {
-        price = 450;
-      } else if (this.type.equals(TYPE_SILVER)) {
-        price = 550;
-      } else if (this.type.equals(TYPE_GOLD)) {
-        price = 700;
-      }
+    if (this.type.equals(TYPE_RED)) {
+      price = 100;
+    } else if (this.type.equals(TYPE_BLUE)) {
+      price = 300;
+    } else if (this.type.equals(TYPE_YELLOW)) {
+      price = 450;
+    } else if (this.type.equals(TYPE_SILVER)) {
+      price = 550;
+    } else if (this.type.equals(TYPE_GOLD)) {
+      price = 700;
     }
+
     return calcDiscount(price);
   }
 
   private double calcDiscount(double price) {
     // 割引処理
     double discountPrice = price;
-    if (this.lap >= 5 && this.lap <= 9) {
-      discountPrice *= 0.9;
-    } else if (this.lap >= 10) {
-      discountPrice *= 0.8;
+    if (this.isDiscount) {
+      if (this.lap >= 5 && this.lap <= 9) {
+        discountPrice *= 0.9;
+      } else if (this.lap >= 10) {
+        discountPrice *= 0.8;
+      }
     }
-
     return discountPrice;
   }
 
