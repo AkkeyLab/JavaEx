@@ -1,5 +1,7 @@
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -23,15 +25,19 @@ public class Conveyer {
    * @return ネタリスト
    */
   public String[] getFewNetaList() {
-    String[] netas = new String[this.netaMap.size()];
+    List<String> fewNetaList = new ArrayList<String>();
 
     Iterator<String> netaKeys = this.netaMap.keySet().iterator();
-    for (int i = 0; netaKeys.hasNext(); i++) {
-      String netaKey = netaKeys.next();
-      netas[i] = netaKey;
+    for (; netaKeys.hasNext();) { // 次のデータが存在するのなら
+      String netaKey = netaKeys.next(); // 次のデータを取得
+
+      int count = this.netaMap.get(netaKey).intValue(); // コンベア上の皿の数を取得
+      if (count <= 5) { // 5皿以下なら出力結果に加える
+        fewNetaList.add(netaKey);
+      }
     }
 
-    return netas;
+    return fewNetaList.toArray(new String[0]);
   }
 
   /**
@@ -40,7 +46,13 @@ public class Conveyer {
    * @param neta ネタ名
    */
   public void add(String neta) {
-    this.netaMap.put(neta, new Integer(1));
+    if (this.netaMap.containsKey(neta)) { // すでに同じネタ名が存在すれば
+      int count = this.netaMap.get(neta).intValue();
+      count++;
+      this.netaMap.put(neta, new Integer(count)); // カウントアップした値をセット
+    } else {
+      this.netaMap.put(neta, new Integer(1)); // 初めてだから初期値1
+    }
   }
 
 }
