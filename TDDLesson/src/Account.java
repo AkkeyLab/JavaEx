@@ -65,7 +65,7 @@ public class Account {
   }
 
   /**
-   * 購入さらに銀皿を追加
+   * 購入皿に銀皿を追加
    * 
    * @param lap 何周目であるか
    * @param isDiscount 割引対象であるか
@@ -73,6 +73,17 @@ public class Account {
   public void addSilverPlate(int lap, boolean isDiscount) {
     // TODO 自動生成されたメソッド・スタブ
     this.plateList.add(Plate.createSilverPlate(lap, isDiscount));
+  }
+
+  /**
+   * 購入皿に金皿を追加
+   * 
+   * @param lap 何周目であるか
+   * @param isDiscount 割引対象であるか
+   */
+  public void addGolePlate(int lap, boolean isDiscount) {
+    // TODO 自動生成されたメソッド・スタブ
+    this.plateList.add(Plate.createGoldPlate(lap, isDiscount));
   }
 
 }

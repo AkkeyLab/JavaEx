@@ -60,6 +60,15 @@ public class AccountTest extends TestCase {
   }
 
   /**
+   * 金皿に関するメソッド
+   */
+  @Test
+  public void testGold() {
+    this.account.addGolePlate(1, true);
+    assertEquals(700, this.account.getTotalPrice());
+  }
+
+  /**
    * 全皿種類に関するメソッド
    */
   @Test
