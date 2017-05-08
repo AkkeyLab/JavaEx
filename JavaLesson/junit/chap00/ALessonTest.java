@@ -9,7 +9,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import lesson.chap00.ALesson;
 import lesson.chap00.Messages;
 
 
