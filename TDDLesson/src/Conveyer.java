@@ -24,7 +24,7 @@ public class Conveyer {
    * 
    * @return ネタリスト
    */
-  public String[] getFewNetaList() {
+  public String[] getFewNetaListOld() {
     List<String> fewNetaList = new ArrayList<String>();
 
     Iterator<String> netaKeys = this.netaMap.keySet().iterator();
@@ -38,6 +38,28 @@ public class Conveyer {
     }
 
     return fewNetaList.toArray(new String[0]);
+  }
+
+  /**
+   * ベルトコンベア上にあるネタリストを取得（改良版）
+   * 
+   * @return ネタリスト
+   */
+  public List<NetaCountVo> getFewNetaList() {
+    List<NetaCountVo> netas = new ArrayList<NetaCountVo>();
+
+    Iterator<String> netaKeys = this.netaMap.keySet().iterator();
+    for (; netaKeys.hasNext();) { // 次のデータが存在するのなら
+      String netaKey = netaKeys.next(); // 次のデータを取得
+
+      int count = this.netaMap.get(netaKey).intValue(); // コンベア上の皿の数を取得
+      if (count <= 5) { // 5皿以下なら出力結果に加える
+        NetaCountVo vo = new NetaCountVo(netaKey, count);
+        netas.add(vo);
+      }
+    }
+
+    return netas;
   }
 
   /**
