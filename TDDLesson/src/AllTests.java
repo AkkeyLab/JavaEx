@@ -15,7 +15,7 @@ import org.junit.runners.Suite.SuiteClasses;
  * @version $Revision$, May 8, 2017
  */
 @RunWith(Suite.class)
-@SuiteClasses({AccountTest.class, PlateTest.class})
+@SuiteClasses({AccountTest.class, PlateTest.class, ConveyerTest.class})
 public class AllTests {
 
   /**
