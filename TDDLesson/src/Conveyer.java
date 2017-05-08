@@ -12,6 +12,7 @@
 public class Conveyer {
 
   private String[] netas;
+  private int count;
 
   /**
    * ベルトコンベア上にあるネタリストを取得
@@ -19,17 +20,21 @@ public class Conveyer {
    * @return ネタリスト
    */
   public String[] getFewNetaList() {
+    this.netas = new String[this.count];
+    this.netas[0] = "まぐろ"; //$NON-NLS-1$
+    if (this.count > 1) {
+      this.netas[1] = "とろ"; //$NON-NLS-1$
+    }
     return this.netas;
   }
 
   /**
    * ベルトコンベア上にネタを追加する
+   * 
    * @param neta ネタ名
    */
   public void add(String neta) {
-    // TODO 自動生成されたメソッド・スタブ
-    this.netas = new String[1];
-    this.netas[0] = neta;
+    this.count++;
   }
 
 }
