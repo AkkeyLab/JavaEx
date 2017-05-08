@@ -51,6 +51,15 @@ public class AccountTest extends TestCase {
   }
 
   /**
+   * 銀皿に関するメソッド
+   */
+  @Test
+  public void testSilver() {
+    this.account.addSilverPlate(1, true);
+    assertEquals(550, this.account.getTotalPrice());
+  }
+
+  /**
    * 全皿種類に関するメソッド
    */
   @Test
