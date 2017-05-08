@@ -38,27 +38,30 @@ public class Account {
    * 購入皿に赤皿を追加
    * 
    * @param lap 何周目であるか
+   * @param isDiscount 割引対象であるか
    */
-  public void addRedPlate(int lap) {
-    this.plateList.add(Plate.createRedPlate(lap)); // 何周目であるかを引数で指定
+  public void addRedPlate(int lap, boolean isDiscount) {
+    this.plateList.add(Plate.createRedPlate(lap, isDiscount)); // 何周目であるかを引数で指定
   }
 
   /**
    * 購入皿に青皿を追加
    * 
    * @param lap 何周目であるか
+   * @param isDiscount 割引対象であるか
    */
-  public void addBluePlate(int lap) {
-    this.plateList.add(Plate.createBluePlate(lap)); // 何周目であるかを引数で指定
+  public void addBluePlate(int lap, boolean isDiscount) {
+    this.plateList.add(Plate.createBluePlate(lap, isDiscount)); // 何周目であるかを引数で指定
   }
 
   /**
    * 購入皿に黃皿を追加
    * 
    * @param lap 何周目であるか
+   * @param isDiscount 割引対象であるか
    */
-  public void addYellowPlate(int lap) {
-    this.plateList.add(Plate.createYellowPlate(lap)); // 何周目であるかを引数で指定
+  public void addYellowPlate(int lap, boolean isDiscount) {
+    this.plateList.add(Plate.createYellowPlate(lap, isDiscount)); // 何周目であるかを引数で指定
   }
 
 }
