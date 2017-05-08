@@ -18,6 +18,7 @@ public class Plate {
   private static final String TYPE_BLUE = "BLUE"; //$NON-NLS-1$
   private static final String TYPE_YELLOW = "YELLOW"; //$NON-NLS-1$
   private static final String TYPE_SILVER = "SILVER"; //$NON-NLS-1$
+  private static final String TYPE_GOLD = "GOLD"; //$NON-NLS-1$
 
   /**
    * 新しく生成された<code>Plate</code>オブジェクトを初期化します。
@@ -48,6 +49,8 @@ public class Plate {
         price = 450;
       } else if (this.type.equals(TYPE_SILVER)) {
         price = 550;
+      } else if (this.type.equals(TYPE_GOLD)) {
+        price = 700;
       }
     }
     return calcDiscount(price);
@@ -111,6 +114,18 @@ public class Plate {
   public static Plate createSilverPlate(int lap, boolean isDiscount) {
     // TODO 自動生成されたメソッド・スタブ
     return new Plate(TYPE_SILVER, lap, isDiscount);
+  }
+
+  /**
+   * 金皿に関するオブジェクト生成メソッド
+   * 
+   * @param lap 何周目であるか
+   * @param isDiscount 割引対象であるか
+   * @return PLateオブジェクト
+   */
+  public static Plate createGoldPlate(int lap, boolean isDiscount) {
+    // TODO 自動生成されたメソッド・スタブ
+    return new Plate(TYPE_GOLD, lap, isDiscount);
   }
 
 }

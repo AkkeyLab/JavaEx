@@ -87,4 +87,22 @@ public class PlateTest {
     assertEquals(SILVER_PRICE * 0.8, Plate.createSilverPlate(10, true).getPrice(), 0);
   }
 
+  /**
+   * 金皿の金額取得に関するテスト
+   */
+  @Test
+  public void testGetPriceGold() {
+    final double GOLD_PRICE = 700;
+
+    for (int i = 1; i <= 4; i++) {
+      assertEquals(GOLD_PRICE, Plate.createGoldPlate(i, true).getPrice(), 0);
+    }
+
+    for (int i = 5; i <= 9; i++) {
+      assertEquals(GOLD_PRICE * 0.9, Plate.createGoldPlate(i, true).getPrice(), 0);
+    }
+
+    assertEquals(GOLD_PRICE * 0.8, Plate.createGoldPlate(10, true).getPrice(), 0);
+  }
+
 }
