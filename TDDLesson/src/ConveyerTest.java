@@ -21,6 +21,7 @@ public class ConveyerTest {
   @Test
   public void testFewNetaList1() {
     Conveyer conveyer = new Conveyer();
+    conveyer.add("まぐろ"); //$NON-NLS-1$
     String[] fewNetas = conveyer.getFewNetaList();
 
     assertEquals("まぐろ", fewNetas[0]); //$NON-NLS-1$
