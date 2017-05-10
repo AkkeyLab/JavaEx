@@ -64,7 +64,7 @@ public class AccountTest extends TestCase {
    */
   @Test
   public void testGold() {
-    this.account.addGolePlate(1, true);
+    this.account.addGoldPlate(1, true);
     assertEquals(700, this.account.getTotalPrice());
   }
 
@@ -127,9 +127,9 @@ public class AccountTest extends TestCase {
     this.account.addSilverPlate(2, true); // 550
     this.account.addSilverPlate(6, true); // 550 * 0.9 = 495 -> 1045
 
-    this.account.addGolePlate(10, true); // 700 * 0.8
-    this.account.addGolePlate(30, true); // 700 * 0.8 -> 2165
-    this.account.addGolePlate(5, true); // 700 * 0.9 -> 2795
+    this.account.addGoldPlate(10, true); // 700 * 0.8
+    this.account.addGoldPlate(30, true); // 700 * 0.8 -> 2165
+    this.account.addGoldPlate(5, true); // 700 * 0.9 -> 2795
 
     this.account.addRedPlate(10, false); // 100 -> 2895
 
