@@ -81,7 +81,7 @@ public class Account {
    * @param lap 何周目であるか
    * @param isDiscount 割引対象であるか
    */
-  public void addGolePlate(int lap, boolean isDiscount) {
+  public void addGoldPlate(int lap, boolean isDiscount) {
     // TODO 自動生成されたメソッド・スタブ
     this.plateList.add(Plate.createGoldPlate(lap, isDiscount));
   }
