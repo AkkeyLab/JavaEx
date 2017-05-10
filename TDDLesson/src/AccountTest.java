@@ -45,7 +45,7 @@ public class AccountTest extends TestCase {
    * 黃皿に関するメソッド
    */
   @Test
-  public void testYellow() {
+  public void testYellowPlate() {
     this.account.addYellowPlate(1, true);
     assertEquals(450, this.account.getTotalPrice());
   }
@@ -54,7 +54,7 @@ public class AccountTest extends TestCase {
    * 銀皿に関するメソッド
    */
   @Test
-  public void testSilver() {
+  public void testSilverPlate() {
     this.account.addSilverPlate(1, true);
     assertEquals(550, this.account.getTotalPrice());
   }
@@ -63,7 +63,7 @@ public class AccountTest extends TestCase {
    * 金皿に関するメソッド
    */
   @Test
-  public void testGold() {
+  public void testGoldPlate() {
     this.account.addGoldPlate(1, true);
     assertEquals(700, this.account.getTotalPrice());
   }
@@ -94,7 +94,7 @@ public class AccountTest extends TestCase {
    * 何周目かによる割引を適応したテスト
    */
   @Test
-  public void testComplex() {
+  public void testComplexPlate() {
     this.account.addRedPlate(1, true); // 100
     for (int i = 0; i < 3; i++) {
       this.account.addBluePlate(1, true); // 100 + 300 * 3 = 1000
