@@ -20,27 +20,6 @@ public class Conveyer {
   private Map<String, Integer> netaMap = new LinkedHashMap<String, Integer>();
 
   /**
-   * ベルトコンベア上にあるネタリストを取得
-   * 
-   * @return ネタリスト
-   */
-  public String[] getFewNetaListOld() {
-    List<String> fewNetaList = new ArrayList<String>();
-
-    Iterator<String> netaKeys = this.netaMap.keySet().iterator();
-    for (; netaKeys.hasNext();) { // 次のデータが存在するのなら
-      String netaKey = netaKeys.next(); // 次のデータを取得
-
-      int count = this.netaMap.get(netaKey).intValue(); // コンベア上の皿の数を取得
-      if (count <= 5) { // 5皿以下なら出力結果に加える
-        fewNetaList.add(netaKey);
-      }
-    }
-
-    return fewNetaList.toArray(new String[0]);
-  }
-
-  /**
    * ベルトコンベア上にあるネタリストを取得（改良版）
    * 
    * @return ネタリスト
